@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="DemoApp.EntryToLabelPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Entry to label text"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center">
+            <Entry
+                x:Name="TextEntry"
+                AutomationId="TextEntry"
+                Placeholder="Text to label" />
+            <Button
+                x:Name="TextButton"
+                AutomationId="TextButton"
+                Clicked="TextButton_OnClicked"
+                Text="Click here to change" />
+            <Label
+                x:Name="TextLabel"
+                AutomationId="TextLabel"
+                Text="Text will be here" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

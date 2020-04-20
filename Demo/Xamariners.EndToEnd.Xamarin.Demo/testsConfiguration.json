@@ -1,0 +1,15 @@
+{
+  "Repl": false,
+  "AndroidConfiguration": {
+    "ApkName": null,
+    "AppPath": "C:\\Xamarin\\Android\\com.companyname.demoapp.apk"
+  },
+  "IosConfiguration": {
+    "Simulator": true,
+    "SimulatorIdentifier": "",
+    "DeviceIdentifier": "",
+    "BundleName": "com.companyname.DemoApp",
+    "AppName": "DemoApp.iOS",
+    "AppPath": "/Users/You/Xamarin/iOS/DemoApp.iOS.app"
+  }
+}

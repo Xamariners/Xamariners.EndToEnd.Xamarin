@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Xamariners.EndToEnd.Xamarin</id>
+    <version>0.0.1</version>
+    <authors>Xamariners</authors>
+    <owners>Xamariners</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Xamariners.EndToEnd.Xamarin is a library to help UI test for Xamarin using Specflow and using Gherkin Language.</description>
+    <copyright>Copyright 2020</copyright>
+    <tags>EndToEnd Xamarin UITest Cucumber Gherkin Specflow TestCloud AppCenter</tags>
+  </metadata>
+</package>

@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>0.0.4</Version>
+    <Configurations>Debug;Release;Local</Configurations>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <!-- See: https://github.com/techtalk/SpecFlow/issues/1516#issuecomment-488244190 -->
+    <_SpecFlow_NUnitRuntimePlugin>netstandard2.0</_SpecFlow_NUnitRuntimePlugin>
+    <UserSecretsId>573bf4fa-f02b-4059-8389-b5b580714ab7</UserSecretsId>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Company>Xamariners</Company>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Local|AnyCPU'">
+    <Optimize>false</Optimize>
+    <DefineConstants>TRACE;__LOCAL__</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ConfigurationReader.cs" />
+    <Compile Remove="Infrastructure\SetupHooks.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="NUnit" Version="3.12.0" />
+    <PackageReference Include="Shouldly" Version="3.0.2" />
+    <PackageReference Include="SpecFlow" Version="3.1.89" />
+    <PackageReference Include="SpecFlow.NUnit" Version="3.1.89" />
+    <PackageReference Include="SpecFlow.NUnit.Runners" Version="3.1.89" />
+    <PackageReference Include="Xamarin.UITest" Version="3.0.7" />
+  </ItemGroup>
+
+</Project>
