@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using Microsoft.AppCenter.Crashes;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -14,6 +16,22 @@ namespace DemoApp
 
         private void TextButton_OnClicked(object sender, EventArgs e)
         {
+            if (TextEntry.Text.ToLower() == "error")
+            {
+                var properties = new Dictionary<string, string>
+                {
+                    { "Category", "Music" },
+                    { "Wifi", "On"}
+                };
+
+                Crashes.TrackError(new Exception("Ben Exception"), properties);
+            }
+            else if(TextEntry.Text.ToLower() == "crash")
+            {
+                int zero = 0;
+                int notGood = 5 / zero;
+            }
+
             TextLabel.Text = TextEntry.Text;
         }
     }

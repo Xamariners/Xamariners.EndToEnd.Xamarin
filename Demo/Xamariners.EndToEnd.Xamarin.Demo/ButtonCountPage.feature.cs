@@ -19,10 +19,10 @@ namespace Xamariners.EndToEnd.Xamarin.Demo
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.1.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [NUnit.Framework.TestFixtureAttribute(TestName="ButtonCount")]
-    [NUnit.Framework.DescriptionAttribute("\tIn order to avoid silly mistakes\r\n\tAs a math idiot\r\n\tI want to be told the sum o" +
-        "f taps")]
-    public partial class ButtonCountFeature
+    [NUnit.Framework.TestFixtureAttribute(TestName="ButtonCountPage")]
+    [NUnit.Framework.DescriptionAttribute("\tIn order to keep track of the times i press that great button\r\n\tAs a user\r\n\tI wa" +
+        "nt to test that fantastic button")]
+    public partial class ButtonCountPageFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
@@ -36,8 +36,8 @@ namespace Xamariners.EndToEnd.Xamarin.Demo
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "ButtonCount", "\tIn order to avoid silly mistakes\r\n\tAs a math idiot\r\n\tI want to be told the sum o" +
-                    "f taps", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "ButtonCountPage", "\tIn order to keep track of the times i press that great button\r\n\tAs a user\r\n\tI wa" +
+                    "nt to test that fantastic button", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -108,40 +108,40 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("I can see \"GoToClickCountTest\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 9
- testRunner.Then("I tap on \"GoToClickCountTest\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("I tap on \"GoToClickCountTest\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 10
- testRunner.And("I am on \"Click count\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then("I am on \"Click Count\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 11
- testRunner.Then("I can see \"CountButton\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.And("I can see \"CountButton\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 12
  testRunner.When("I tap on \"CountButton\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 13
- testRunner.Then("I can see \"You clicked 1 time on the button\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I can see \"Clicked 1 times\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 14
- testRunner.And("The label \"ClickCountLabel\" text is \"You clicked 1 time on the button\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("The label \"ClickCountLabel\" text is \"Clicked 1 times\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 15
  testRunner.When("I tap on \"CountButton\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 16
- testRunner.Then("I can see \"You clicked 2 times on the button\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I can see \"Clicked 2 times\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 17
- testRunner.And("The label \"ClickCountLabel\" text is \"You clicked 2 times on the button\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("The label \"ClickCountLabel\" text is \"Clicked 2 times\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 18
  testRunner.When("I tap on \"CountButton\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 19
- testRunner.Then("I can see \"You clicked 3 times on the button\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I can see \"Clicked 3 times\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 20
- testRunner.And("The label \"ClickCountLabel\" text is \"You clicked 3 times on the button\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("The label \"ClickCountLabel\" text is \"Clicked 3 times\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();

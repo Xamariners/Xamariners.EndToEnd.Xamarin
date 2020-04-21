@@ -1,26 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage
-    x:Class="DemoApp.ButtonCountPage"
-    xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Title="Click count"
-    mc:Ignorable="d">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="Click Count"
+             x:Class="DemoApp.ButtonCountPage">
     <ContentPage.Content>
         <StackLayout VerticalOptions="Center">
-            <Label
+            <Label 
                 x:Name="ClickCountLabel"
                 AutomationId="ClickCountLabel"
-                HorizontalOptions="Center"
-                Text="You clicked 0 times on the button"
-                VerticalOptions="CenterAndExpand" />
-            <Button
+                Text="No Clicks Yet!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="Center" />
+
+            <Button Padding="10" Margin="100"
                 AutomationId="CountButton"
                 BackgroundColor="DeepSkyBlue"
+                Text="Click Me!"
+                TextColor="White"
+                FontSize="Medium"
                 Clicked="Button_OnClicked"
-                Text="Click me!"
-                TextColor="White" />
+                />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

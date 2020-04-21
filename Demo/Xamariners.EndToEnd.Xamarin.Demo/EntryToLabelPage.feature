@@ -1,7 +1,5 @@
 ﻿Feature: EntryToLabelPage
 
-
-
 Scenario: Changing label text
 	Given I am on "Main page" page
 	And I can see "GoToEntryToLabelTest"

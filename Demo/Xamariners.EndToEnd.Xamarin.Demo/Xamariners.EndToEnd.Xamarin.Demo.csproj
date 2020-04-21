@@ -1,42 +1,31 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8CABBCF1-72DA-4613-95D5-F390DBA51C47}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>Xamariners.EndToEnd.Xamarin.Demo</RootNamespace>
-    <AssemblyName>Xamariners.EndToEnd.Xamarin.Demo</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFramework>net461</TargetFramework>
+    <Version>0.0.4</Version>
+    <Configurations>Debug;Release;Local</Configurations>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
+
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Local|AnyCPU'">
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug</OutputPath>
-    <DefineConstants>DEBUG;</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <DefineConstants>TRACE;__LOCAL__</DefineConstants>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release</OutputPath>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Local|AnyCPU'">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\Local\</OutputPath>
-    <DefineConstants>DEBUG;__LOCAL__</DefineConstants>
-    <DebugType>full</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <LangVersion>7.3</LangVersion>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
+
+
+  <ItemGroup>
+    <None Remove="testsConfiguration.json" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <EmbeddedResource Include="testsConfiguration.json" />
+  </ItemGroup>
+
   <ItemGroup>
     <Reference Include="System" />
   </ItemGroup>
+ 
   <ItemGroup>
     <PackageReference Include="NUnit" Version="3.12.0" />
     <PackageReference Include="SpecFlow.Tools.MsBuild.Generation">
@@ -48,31 +37,9 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
   </ItemGroup>
+ 
   <ItemGroup>
-    <None Include="ButtonCountPage.feature" />
-    <None Include="EntryToLabelPage.feature" />
-    <None Include="FullNavigation.feature" />
-    <None Include="specflow.json" />
-    <EmbeddedResource Include="testsConfiguration.json" />
+    <ProjectReference Include="..\..\src\Xamariners.EndToEnd.Xamarin\Xamariners.EndToEnd.Xamarin.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="AppInitializer.cs" />
-    <Compile Include="ButtonCountPage.feature.cs" />
-    <Compile Include="EntryToLabelPage.feature.cs" />
-    <Compile Include="Features\BaseLocalFeature.cs" />
-    <Compile Include="Features\ButtonCountFeature.cs" />
-    <Compile Include="Features\EntryToLabelPageFeature.cs" />
-    <Compile Include="Features\FullNavigationFeature.cs" />
-    <Compile Include="FullNavigation.feature.cs" />
-    <Compile Include="Infrastructure\BaseAppInitializer.cs" />
-    <Compile Include="NUnitAssemblyHooks.cs" />
-    <Compile Include="Steps\CommonSteps.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\src\Xamariners.EndToEnd.Xamarin\Xamariners.EndToEnd.Xamarin.csproj">
-      <Project>{343257b0-3152-4f8a-8589-01881d0d00ca}</Project>
-      <Name>Xamariners.EndToEnd.Xamarin</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+
 </Project>
