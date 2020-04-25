@@ -19,7 +19,7 @@ namespace DemoApp
 
         protected override void OnStart()
         {
-            AppCenter.Start("android=0adaca02-8ae4-40e0-a80e-cf187aaf412d",
+            AppCenter.Start("android=bfc0a211-8040-4a8d-b042-568876c2dc6c",
                 typeof(Analytics), typeof(Crashes), typeof(Distribute));
 
             AppCenter.SetUserId("I-Am-Ben");
