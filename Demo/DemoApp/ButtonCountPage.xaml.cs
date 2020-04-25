@@ -22,7 +22,7 @@ namespace DemoApp
         private void Button_OnClicked(object sender, EventArgs e)
         {
             ClickCountLabel.Text = $"Clicked {_count++} times";
-            Analytics.TrackEvent($"Button Clicked {_count++} times");
+            Analytics.TrackEvent($"Button Clicked {_count} times");
         }
     }
 }

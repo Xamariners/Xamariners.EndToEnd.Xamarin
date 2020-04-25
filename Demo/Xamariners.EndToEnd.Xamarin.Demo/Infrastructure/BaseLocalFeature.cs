@@ -1,7 +1,7 @@
 ﻿using Xamarin.UITest;
 using Xamariners.EndToEnd.Xamarin.Features;
 
-namespace Xamariners.EndToEnd.Xamarin.Demo.Features
+namespace Xamariners.EndToEnd.Xamarin.Demo.Infrastructure
 {
     public class BaseLocalFeature : BaseFeature
     {

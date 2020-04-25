@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace Xamariners.EndToEnd.Xamarin.Demo
+namespace Xamariners.EndToEnd.Xamarin.Demo.Features
 {
     using TechTalk.SpecFlow;
     using System;
