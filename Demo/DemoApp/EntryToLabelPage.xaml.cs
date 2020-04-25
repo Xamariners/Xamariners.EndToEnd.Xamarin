@@ -20,8 +20,8 @@ namespace DemoApp
             {
                 var properties = new Dictionary<string, string>
                 {
-                    { "Category", "Music" },
-                    { "Wifi", "On"}
+                    { "Context", "Gab 2020" },
+                    { "User", "Ben"}
                 };
 
                 Crashes.TrackError(new Exception("Ben Exception"), properties);
