@@ -1,84 +1,93 @@
 ﻿<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	<PropertyGroup>
-		<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-		<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-		<ProjectGuid>{8CABBCF1-72DA-4613-95D5-F390DBA51C47}</ProjectGuid>
-		<OutputType>Library</OutputType>
-		<RootNamespace>Xamariners.EndToEnd.Xamarin.Demo</RootNamespace>
-		<AssemblyName>Xamariners.EndToEnd.Xamarin.Demo</AssemblyName>
-		<TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
-	</PropertyGroup>
-	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-		<DebugSymbols>true</DebugSymbols>
-		<DebugType>full</DebugType>
-		<Optimize>false</Optimize>
-		<OutputPath>bin\Debug</OutputPath>
-		<DefineConstants>DEBUG;</DefineConstants>
-		<ErrorReport>prompt</ErrorReport>
-		<WarningLevel>4</WarningLevel>
-	</PropertyGroup>
-	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-		<Optimize>true</Optimize>
-		<OutputPath>bin\Release</OutputPath>
-		<ErrorReport>prompt</ErrorReport>
-		<WarningLevel>4</WarningLevel>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Local|AnyCPU'">
-		<DebugSymbols>true</DebugSymbols>
-		<OutputPath>bin\Local\</OutputPath>
-		<DefineConstants>DEBUG;__LOCAL__</DefineConstants>
-		<DebugType>full</DebugType>
-		<PlatformTarget>AnyCPU</PlatformTarget>
-		<LangVersion>7.3</LangVersion>
-		<ErrorReport>prompt</ErrorReport>
-		<CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-	</PropertyGroup>
-	<ItemGroup>
-		<Reference Include="System" />
-	</ItemGroup>
-	<ItemGroup>
-		<PackageReference Include="NUnit" Version="3.12.0" />
-		<PackageReference Include="SpecFlow.Tools.MsBuild.Generation">
-			<Version>3.1.89</Version>
-		</PackageReference>
-		<PackageReference Include="Xamarin.UITest" Version="3.0.7" />
-		<PackageReference Include="NUnit3TestAdapter" Version="3.16.1">
-			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-			<PrivateAssets>all</PrivateAssets>
-		</PackageReference>
-	</ItemGroup>
-	<ItemGroup>
-		<None Include="specflow.json" />
-		<EmbeddedResource Include="testsConfiguration.json" />
-	</ItemGroup>
-	<ItemGroup>
-		<Compile Include="AppInitializer.cs" />
-		<Compile Include="Features\ButtonCountPage.feature.cs" />
-		<Compile Include="Features\ButtonCountPageFeature.cs" />
-		<Compile Include="Features\EntryToLabelPage.feature.cs" />
-		<Compile Include="Features\EntryToLabelPageFeature.cs" />
-		<Compile Include="Features\FullNavigation.feature.cs" />
-		<Compile Include="Features\FullNavigationFeature.cs" />
-		<Compile Include="Infrastructure\BaseAppInitializer.cs" />
-		<Compile Include="Infrastructure\BaseLocalFeature.cs" />
-		<Compile Include="NUnitAssemblyHooks.cs" />
-		<Compile Include="Steps\CommonSteps.cs" />
-	</ItemGroup>
-	<ItemGroup>
-		<ProjectReference Include="..\..\src\Xamariners.EndToEnd.Xamarin\Xamariners.EndToEnd.Xamarin.csproj">
-			<Project>{343257b0-3152-4f8a-8589-01881d0d00ca}</Project>
-			<Name>Xamariners.EndToEnd.Xamarin</Name>
-		</ProjectReference>
-	</ItemGroup>
-	<Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-	<ItemGroup>
-	  <CustomAdditionalCompileInputs Remove="Features\ButtonCountPage.feature.cs" />
-	  <CustomAdditionalCompileInputs Remove="Features\EntryToLabelPage.feature.cs" />
-	  <CustomAdditionalCompileInputs Remove="Features\FullNavigation.feature.cs" />
-	</ItemGroup>
-	<ItemGroup>
-	  <UpToDateCheckBuild Remove="Features\ButtonCountPage.feature.cs" />
-	  <UpToDateCheckBuild Remove="Features\EntryToLabelPage.feature.cs" />
-	  <UpToDateCheckBuild Remove="Features\FullNavigation.feature.cs" />
-	</ItemGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8CABBCF1-72DA-4613-95D5-F390DBA51C47}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Xamariners.EndToEnd.Xamarin.Demo</RootNamespace>
+    <AssemblyName>Xamariners.EndToEnd.Xamarin.Demo</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Local|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Local\</OutputPath>
+    <DefineConstants>DEBUG;__LOCAL__</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="NUnit" Version="3.11.0" />
+    <PackageReference Include="SpecFlow.NUnit">
+      <Version>3.1.97</Version>
+    </PackageReference>
+    <PackageReference Include="SpecFlow.Tools.MsBuild.Generation">
+      <Version>3.1.97</Version>
+    </PackageReference>
+    <PackageReference Include="NUnit.Extension.VSProjectLoader" Version="3.8.0" />
+    <PackageReference Include="Xamarin.UITest" Version="3.0.7" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.16.1">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Features\ClickCountPage.feature" />
+    <None Include="Features\EntryToLabelPage.feature" />
+    <None Include="Features\FullNavigation.feature" />
+    <EmbeddedResource Include="TestConfig.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <SpecFlowFeatureFiles Update="Features\ButtonCountPage.feature">
+      <Visible>True</Visible>
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Features\ButtonCountPage.feature.cs</LastGenOutput>
+    </SpecFlowFeatureFiles>
+    <Compile Include="Features\ClickCountPage.feature.cs" />
+    <Compile Include="Features\ClickCountPageFeature.cs" />
+    <SpecFlowFeatureFiles Update="Features\EntryToLabelPage.feature">
+      <Visible>True</Visible>
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Features\EntryToLabelPage.feature.cs</LastGenOutput>
+    </SpecFlowFeatureFiles>
+    <Compile Include="Features\EntryToLabelPage.feature.cs" />
+    <Compile Include="Features\EntryToLabelPageFeature.cs" />
+    <SpecFlowFeatureFiles Update="Features\FullNavigation.feature">
+      <Visible>True</Visible>
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Features\FullNavigation.feature.cs</LastGenOutput>
+    </SpecFlowFeatureFiles>
+    <Compile Include="Features\FullNavigation.feature.cs" />
+    <Compile Include="Features\FullNavigationFeature.cs" />
+    <Compile Include="NUnitAssemblyHooks.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Xamariners.EndToEnd.Xamarin\Xamariners.EndToEnd.Xamarin.csproj">
+      <Project>{343257b0-3152-4f8a-8589-01881d0d00ca}</Project>
+      <Name>Xamariners.EndToEnd.Xamarin</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

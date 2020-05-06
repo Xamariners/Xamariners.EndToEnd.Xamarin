@@ -5,6 +5,7 @@ using Shouldly;
 using Xamarin.UITest;
 using Xamarin.UITest.Queries;
 using Xamariners.EndToEnd.Xamarin.Features;
+using Xamariners.EndToEnd.Xamarin.Infrastructure;
 using Xamariners.EndToEnd.Xamarin.Screens.Interface;
 
 namespace Xamariners.EndToEnd.Xamarin.Screens.Implementation
@@ -13,9 +14,8 @@ namespace Xamariners.EndToEnd.Xamarin.Screens.Implementation
     public class ScreenQueries : IScreenQueries
     {
 
-        private IApp App => BaseFeature.App;
+        private IApp App => RunnerConfiguration.Current.App;
         private readonly Platform _platform;
-
 
         public ScreenQueries(Platform platform)
         {

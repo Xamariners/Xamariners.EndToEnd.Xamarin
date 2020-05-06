@@ -1,25 +1,17 @@
-﻿using NUnit.Framework;
+﻿using System.Reflection;
+using NUnit.Framework;
 using TechTalk.SpecFlow;
+using Xamariners.EndToEnd.Xamarin.Features;
+using Xamariners.EndToEnd.Xamarin.Infrastructure;
 
 namespace Xamariners.EndToEnd.Xamarin.Demo
 {
     [SetUpFixture]
-    public class NUnitAssemblyHooks
+    public class NUnitAssemblyHooks : NUnitAssemblyHooksBase
     {
-        [OneTimeSetUp]
-        public void AssemblyInitialize()
+        static NUnitAssemblyHooks()
         {
-            var currentAssembly = typeof(NUnitAssemblyHooks).Assembly;
-
-            TestRunnerManager.OnTestRunStart(currentAssembly);
-        }
-
-        [OneTimeTearDown]
-        public void AssemblyCleanup()
-        {
-            var currentAssembly = typeof(NUnitAssemblyHooks).Assembly;
-
-            TestRunnerManager.OnTestRunEnd(currentAssembly);
+            RunnerConfiguration.CurrentAssembly = typeof(NUnitAssemblyHooks).Assembly;
         }
     }
 }

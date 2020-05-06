@@ -22,7 +22,7 @@ namespace DemoApp
             AppCenter.Start("android=9150a140-a2f6-4270-a61c-bc06e1ec3ff8",
                 typeof(Analytics), typeof(Crashes), typeof(Distribute));
 
-            AppCenter.SetUserId("Ben User");
+            AppCenter.SetUserId("I-Am-Ben");
         }
 
         protected override void OnSleep()

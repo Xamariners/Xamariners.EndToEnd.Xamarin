@@ -10,11 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace DemoApp
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ButtonCountPage : ContentPage
+    public partial class ClickCountPage : ContentPage
     {
         private int _count = 1;
 
-        public ButtonCountPage()
+        public ClickCountPage()
         {
             InitializeComponent();
         }
@@ -22,7 +22,7 @@ namespace DemoApp
         private void Button_OnClicked(object sender, EventArgs e)
         {
             ClickCountLabel.Text = $"Clicked {_count++} times";
-            Analytics.TrackEvent($"Button Clicked {_count++} times");
+            Analytics.TrackEvent($"Button Clicked {_count} times");
         }
     }
 }

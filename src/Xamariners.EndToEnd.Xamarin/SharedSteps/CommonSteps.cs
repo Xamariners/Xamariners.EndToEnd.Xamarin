@@ -1,5 +1,9 @@
-﻿using Shouldly;
+﻿using System;
+using System.IO;
+using Shouldly;
 using TechTalk.SpecFlow;
+using Xamarin.UITest;
+using Xamariners.EndToEnd.Xamarin.Features;
 using Xamariners.EndToEnd.Xamarin.Infrastructure;
 
 namespace Xamariners.EndToEnd.Xamarin.SharedSteps
@@ -7,8 +11,6 @@ namespace Xamariners.EndToEnd.Xamarin.SharedSteps
     [Binding]
     public class CommonSteps : StepBase
     {
-        // Path to save the screenshots on local run
-        protected string ScreenshotPath { get; set; }
 
         public CommonSteps(ScenarioContext scenarioContext) : base(scenarioContext)
         {
@@ -35,7 +37,8 @@ namespace Xamariners.EndToEnd.Xamarin.SharedSteps
             results.ShouldNotBeNull();
             results.Length.ShouldBeGreaterThan(0);
 
-            ScreenQueries.SaveScreenshot(ScreenshotPath, $"{marked} is visible");
+            if(RunnerConfiguration.Current.EnableScreenshots)
+                ScreenQueries.SaveScreenshot(RunnerConfiguration.Current.ScreenshotsPath, $"{marked} is visible");
         }
 
         [Given(@"I tap on ""([^""]*)"" button")]
@@ -48,7 +51,9 @@ namespace Xamariners.EndToEnd.Xamarin.SharedSteps
             ScreenQueries.ValidateButtonMarked(marked);
 
             ScreenQueries.TapOnButtonMarked(marked);
-            ScreenQueries.SaveScreenshot(ScreenshotPath, $"Tapped on button {marked}");
+
+            if(RunnerConfiguration.Current.EnableScreenshots)
+                ScreenQueries.SaveScreenshot(RunnerConfiguration.Current.ScreenshotsPath, $"Tapped on button {marked}");
         }
 
         [Given(@"The label ""([^""]*)"" text is ""([^""]*)""")]
@@ -72,7 +77,6 @@ namespace Xamariners.EndToEnd.Xamarin.SharedSteps
 
             ScreenQueries.ValidateEntry(marked);
             ScreenQueries.EnterTextOnElementMarked(marked, text);
-
         }
 
         [Given(@"I can see a label marked as ""([^""]*)""")]
@@ -134,7 +138,5 @@ namespace Xamariners.EndToEnd.Xamarin.SharedSteps
 
             ScreenQueries.NavigateBack();
         }
-
-
     }
 }

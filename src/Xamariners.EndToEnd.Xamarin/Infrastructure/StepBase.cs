@@ -8,9 +8,8 @@ namespace Xamariners.EndToEnd.Xamarin.Infrastructure
     public abstract class StepBase
     {
         protected readonly ScenarioContext _scenarioContext;
-
-        protected IApp App => BaseFeature.App;
-        protected IScreenQueries ScreenQueries => BaseFeature.ScreenQueries;
+        
+        protected IScreenQueries ScreenQueries => RunnerConfiguration.Current.ScreenQueries;
 
         protected StepBase(ScenarioContext scenarioContext)
         {

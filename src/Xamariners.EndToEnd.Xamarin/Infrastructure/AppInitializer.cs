@@ -1,12 +1,12 @@
 ﻿using Xamarin.UITest;
-using Xamariners.EndToEnd.Xamarin.Models;
+using Xamariners.EndToEnd.Xamarin.Features;
 
-namespace Xamariners.EndToEnd.Xamarin.Demo
+namespace Xamariners.EndToEnd.Xamarin.Infrastructure
 {
-    public class AppInitializer
+    public class BaseAppInitializer : IBaseAppInitializer
     {
 
-        public static IApp StartApp(Platform platform, RunnerConfiguration runnerConfiguration)
+        public virtual IApp StartApp(Platform platform, RunnerConfiguration runnerConfiguration)
         {
             if (platform == Platform.Android)
             {
@@ -38,10 +38,11 @@ namespace Xamariners.EndToEnd.Xamarin.Demo
                 .EnableLocalScreenshots()
                 .StartApp();
         }
-        public static IApp StartApp(Platform platform)
+        public virtual IApp StartApp(Platform platform)
         {
             if (platform == Platform.Android)
             {
+                
                 return ConfigureApp.Android.StartApp();
             }
 

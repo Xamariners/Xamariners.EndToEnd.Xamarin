@@ -1,4 +1,4 @@
-﻿Feature: ButtonCountPage
+﻿Feature: ClickCountPage
 	In order to keep track of the times i press that great button
 	As a user
 	I want to test that fantastic button

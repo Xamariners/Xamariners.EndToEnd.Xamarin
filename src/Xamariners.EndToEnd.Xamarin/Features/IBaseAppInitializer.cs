@@ -1,5 +1,5 @@
 ﻿using Xamarin.UITest;
-using Xamariners.EndToEnd.Xamarin.Models;
+using Xamariners.EndToEnd.Xamarin.Infrastructure;
 
 namespace Xamariners.EndToEnd.Xamarin.Features
 {

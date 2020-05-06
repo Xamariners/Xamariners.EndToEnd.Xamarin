@@ -5,24 +5,20 @@ Xamariners.EndToEnd.Xamarin is a library to help UI test for Xamarin using Specf
 You can see the sample how to use it in the `Demo` folder. 
 Installation:
 1. Create  `Xamarin.UITest Cross Platform Test Project`
-2. Ensure that this project targets .NET Framework 4.6.1 or higher
+2. Ensure that this project targets .NET Framework 4.6.1 or higher - notcore not supported on appcenter . although supporterd for local runs
 3. Add needed nuget packages. Packages that needs to be installed in your unit test project is
    - `NUnit3TestAdapter`
    - `SpecFlow.Tools.MsBuild.Generation`
-4. Add `Local` configuration for project and add `__LOCAL__` on conditional compilation symbols
-5. Create an overload for `public static IApp StartApp` on `AppInitializer` to be able to run with configuration file
-6. Add `BaseAppInitializer` that inherits from `IBaseAppInitializer`
-7. Create `CommonSteps.cs` that inherits from `Xamariners.EndToEnd.Xamarin.SharedSteps.CommonSteps` and bind it to your project with `[Binding]`
-8. Copy `NUnitAssemblyHooks.cs` from Demo project
+4. Create an overload for `public static IApp StartApp` on `AppInitializer` to be able to run with configuration file
+5. Add a `NUnitAssemblyHooks.cs` as per the demo project
    - This is required to AppCenter be able to finish the tests without crashing, since there will be two or more projects for UI tests
-9. Add `specflow.json`
-10. Add JSON file to have the tests configuration for local runs
-   - On Demo project it's called `testsConfiguration.json`
-   - It must follow the model `Xamariners.EndToEnd.Xamarin.Models.`
-11. Add `BaseLocalFeature.cs` that will inherit from `Xamariners.EndToEnd.Xamarin.Features.BaseFeature`
-   - Initialize `BaseAppInitializer` from constructor
-12. Final steps is to write feature and steps for your unit test using Gherkin Language https://cucumber.io/docs/gherkin/reference/
-13. Each feature must have a partial class that will inherit from `BaseLocalFeature`
+6. Add `App.config` as per the demo project
+7. Add JSON file to have the tests configuration for local runs
+   - On Demo project it's called `testConfig.json` as per demo
+
+
+10. Final steps is to write feature and steps for your unit test using Gherkin Language https://cucumber.io/docs/gherkin/reference/
+11. Each feature must have a partial class that will inherit from `BaseFeature`
    - These classes should be created to have `TestFixture` for Android and iOS and to parse `Platform`
 
 # Setup
