@@ -25,7 +25,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="ButtonCountPage.xaml">
+    <Compile Update="ClickCountPage.xaml.cs">
+      <DependentUpon>ClickCountPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="ClickCountPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="EntryToLabelPage.xaml">

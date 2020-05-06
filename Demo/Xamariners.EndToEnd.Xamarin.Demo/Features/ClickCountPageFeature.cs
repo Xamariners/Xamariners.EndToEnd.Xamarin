@@ -10,9 +10,9 @@ namespace Xamariners.EndToEnd.Xamarin.Demo.Features
     [TestFixture(Platform.iOS)]
 #endif
 
-    public partial class ButtonCountPageFeature : BaseLocalFeature
+    public partial class ClickCountPageFeature : BaseLocalFeature
     {
-        public ButtonCountPageFeature(Platform platform) : base(platform)
+        public ClickCountPageFeature(Platform platform) : base(platform)
         {
         }
     }

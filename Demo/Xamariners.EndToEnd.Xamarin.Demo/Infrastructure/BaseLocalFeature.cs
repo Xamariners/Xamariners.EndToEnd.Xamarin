@@ -10,7 +10,7 @@ namespace Xamariners.EndToEnd.Xamarin.Demo.Infrastructure
 #if __LOCAL__
             ConfigurationFile = "testsConfiguration.json";
 #endif
-            BaseAppInitializer = new Infrastructure.BaseAppInitializer();
+            BaseAppInitializer = new AppInitializer();
         }
     }
 }

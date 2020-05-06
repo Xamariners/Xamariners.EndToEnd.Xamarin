@@ -19,24 +19,24 @@ namespace Xamariners.EndToEnd.Xamarin.Demo.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.1.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [NUnit.Framework.TestFixtureAttribute(TestName="ButtonCountPage")]
+    [NUnit.Framework.TestFixtureAttribute(TestName="ClickCountPage")]
     [NUnit.Framework.DescriptionAttribute("\tIn order to keep track of the times i press that great button\r\n\tAs a user\r\n\tI wa" +
         "nt to test that fantastic button")]
-    public partial class ButtonCountPageFeature
+    public partial class ClickCountPageFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private string[] _featureTags = ((string[])(null));
         
-#line 1 "ButtonCountPage.feature"
+#line 1 "ClickCountPage.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "ButtonCountPage", "\tIn order to keep track of the times i press that great button\r\n\tAs a user\r\n\tI wa" +
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "ClickCountPage", "\tIn order to keep track of the times i press that great button\r\n\tAs a user\r\n\tI wa" +
                     "nt to test that fantastic button", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
