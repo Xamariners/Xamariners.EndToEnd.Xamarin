@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Reflection;
 using NUnit.Framework;
 using TechTalk.SpecFlow;
 
@@ -10,7 +9,7 @@ namespace Xamariners.EndToEnd.Xamarin.Infrastructure
         [OneTimeSetUp]
         public virtual void AssemblyInitialize()
         {
-            if(RunnerConfiguration.CurrentAssembly == null)
+            if (RunnerConfiguration.CurrentAssembly == null)
                 throw new Exception("Please set RunnerConfiguration.CurrentAssembly before calling this method");
 
             TestRunnerManager.OnTestRunStart(RunnerConfiguration.CurrentAssembly);

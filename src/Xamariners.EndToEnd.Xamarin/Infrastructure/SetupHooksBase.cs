@@ -3,11 +3,11 @@
 namespace Xamariners.EndToEnd.Xamarin.Infrastructure
 {
     [Binding]
-    public class SetupHooks
+    public class SetupHooksBase
     {
         protected readonly ScenarioContext _scenarioContext;
 
-        public SetupHooks(ScenarioContext scenarioContext)
+        public SetupHooksBase(ScenarioContext scenarioContext)
         {
             _scenarioContext = scenarioContext;
         }

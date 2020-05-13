@@ -8,9 +8,9 @@ namespace Xamariners.EndToEnd.Xamarin.Demo.Features
 #if __Apple__
     [TestFixture(Platform.iOS)]
 #endif
-    public partial class FullNavigationFeature : FeatureBase
+    public partial class ScrollPageFeature : FeatureBase
     {
-        public FullNavigationFeature(Platform platform) : base(platform)
+        public ScrollPageFeature(Platform platform) : base(platform)
         {
         }
     }

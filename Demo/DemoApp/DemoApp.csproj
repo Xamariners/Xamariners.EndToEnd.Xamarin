@@ -20,8 +20,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="ClickCountPage.xaml.cs">
-      <DependentUpon>ClickCountPage.xaml</DependentUpon>
+    <Compile Update="EntryAndLabelPage.xaml.cs">
+      <DependentUpon>EntryAndLabelPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
@@ -29,8 +29,17 @@
     <EmbeddedResource Update="ClickCountPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="EntryToLabelPage.xaml">
+    <EmbeddedResource Update="EntryAndLabelPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="ScrollPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="ScrollPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
   </ItemGroup>
 </Project>

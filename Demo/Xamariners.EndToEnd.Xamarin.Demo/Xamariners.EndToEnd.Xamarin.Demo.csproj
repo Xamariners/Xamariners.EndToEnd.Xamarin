@@ -55,8 +55,8 @@
     <None Include="App.config" />
     <None Include="Features\ClickCountPage.feature" />
     <None Include="Features\EntryToLabelPage.feature" />
-    <None Include="Features\FullNavigation.feature" />
     <EmbeddedResource Include="TestConfig.json" />
+    <None Include="Features\ScrollPage.feature" />
   </ItemGroup>
   <ItemGroup>
     <SpecFlowFeatureFiles Update="Features\ButtonCountPage.feature">
@@ -78,8 +78,8 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Features\FullNavigation.feature.cs</LastGenOutput>
     </SpecFlowFeatureFiles>
-    <Compile Include="Features\FullNavigation.feature.cs" />
-    <Compile Include="Features\FullNavigationFeature.cs" />
+    <Compile Include="Features\ScrollPage.feature.cs" />
+    <Compile Include="Features\ScrollPageFeature.cs" />
     <Compile Include="NUnitAssemblyHooks.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,7 +1,4 @@
-﻿using System.Reflection;
-using NUnit.Framework;
-using TechTalk.SpecFlow;
-using Xamariners.EndToEnd.Xamarin.Features;
+﻿using NUnit.Framework;
 using Xamariners.EndToEnd.Xamarin.Infrastructure;
 
 namespace Xamariners.EndToEnd.Xamarin.Demo

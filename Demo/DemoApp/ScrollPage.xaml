@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="DemoApp.ScrollPage"
+             Title="Scroll Page">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <CollectionView ItemsLayout="VerticalList">
+                <CollectionView.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Baboon</x:String>
+                        <x:String>Capuchin Monkey</x:String>
+                        <x:String>Blue Monkey</x:String>
+                        <x:String>Squirrel Monkey</x:String>
+                        <x:String>Golden Lion Tamarin</x:String>
+                        <x:String>Howler Monkey</x:String>
+                        <x:String>Japanese Macaque</x:String>
+                        <x:String>Mandrill</x:String>
+                        <x:String>Proboscis Monkey</x:String>
+                        <x:String>Red-shanked Douc</x:String>
+                        <x:String>Gray-shanked Douc</x:String>
+                        <x:String>Golden Snub-nosed Monkey</x:String>
+                        <x:String>Black Snub-nosed Monkey</x:String>
+                        <x:String>Tonkin Snub-nosed Monkey</x:String>
+                        <x:String>Thomas's Langur</x:String>
+                        <x:String>Purple-faced Langur</x:String>
+                        <x:String>Cat</x:String>
+                        <x:String>Dog</x:String>
+                        <x:String>Dawg</x:String>
+                        <x:String>Monkeyzor</x:String>
+                        <x:String>Champomy</x:String>
+                        <x:String>Chanson</x:String>
+                        <x:String>YvesDuteil</x:String>
+                        <x:String>Artisan</x:String>
+                        <x:String>PontDeBois</x:String>
+                        <x:String>Plastic</x:String>
+                        <x:String>Bertrand</x:String>
+                        <x:String>Grabadu</x:String>
+                        <x:String>Fromage2000</x:String>
+                        <x:String>Pot</x:String>
+                        <x:String>Pourri</x:String>
+                        <x:String>SanKuKai</x:String>
+                        <x:String>LaBataille</x:String>
+                        <x:String>DesPlanetes</x:String>
+                        <x:String>Gaston</x:String>
+                        <x:String>Telephon</x:String>
+                        <x:String>Son</x:String>
+                        <x:String>Paquet De Bonbon A La Peche</x:String>
+                    </x:Array>
+                </CollectionView.ItemsSource>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Label Padding="10"
+                               Text="{Binding .}" 
+                               AutomationId="{Binding .}"
+                               FontAttributes="Bold" />
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+                <CollectionView.Header>
+                    <Button
+                            AutomationId="TopButton"
+                            BackgroundColor="DeepSkyBlue"
+                            Text="Top"
+                            TextColor="White" />
+                </CollectionView.Header>
+                <CollectionView.Footer>
+                <Button
+                    AutomationId="BottomButton"
+                    BackgroundColor="DeepSkyBlue"
+                    Text="Bottom"
+                    TextColor="White" />
+            </CollectionView.Footer>
+        </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.IO;
 using System.Reflection;
-using System.Transactions;
 using Newtonsoft.Json;
 using Xamarin.UITest;
 using Xamariners.EndToEnd.Xamarin.Screens.Interface;

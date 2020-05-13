@@ -1,6 +1,4 @@
 ﻿using TechTalk.SpecFlow;
-using Xamarin.UITest;
-using Xamariners.EndToEnd.Xamarin.Features;
 using Xamariners.EndToEnd.Xamarin.Screens.Interface;
 
 namespace Xamariners.EndToEnd.Xamarin.Infrastructure

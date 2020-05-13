@@ -1,12 +1,7 @@
-﻿using System;
-using System.IO;
-using System.Linq;
-using System.Reflection;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using Xamarin.UITest;
 using Xamariners.EndToEnd.Xamarin.Infrastructure;
 using Xamariners.EndToEnd.Xamarin.Screens.Implementation;
-using Xamariners.EndToEnd.Xamarin.Screens.Interface;
 
 namespace Xamariners.EndToEnd.Xamarin.Features
 {
