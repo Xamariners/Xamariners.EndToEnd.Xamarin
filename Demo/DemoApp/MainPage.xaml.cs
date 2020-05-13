@@ -16,8 +16,12 @@ namespace DemoApp
         }
         private void Button_OnClicked2(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new EntryToLabelPage());
+            Navigation.PushAsync(new EntryAndLabelPage());
         }
-      
+
+        private void Button_OnClicked3(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ScrollPage());
+        }
     }
 }

@@ -13,14 +13,21 @@
             AutomationId="GoToClickCountTest"
             BackgroundColor="DeepSkyBlue"
             Clicked="Button_OnClicked"
-            Text="Click Count test"
+            Text="Click Count"
             TextColor="White" />
 
         <Button
             AutomationId="GoToEntryToLabelTest"
             BackgroundColor="DeepSkyBlue"
             Clicked="Button_OnClicked2"
-            Text="Entry to label"
+            Text="Entry and Label"
+            TextColor="White" />
+
+        <Button
+            AutomationId="GoToScrollTest"
+            BackgroundColor="DeepSkyBlue"
+            Clicked="Button_OnClicked3"
+            Text="Scroll"
             TextColor="White" />
 
     </StackLayout>

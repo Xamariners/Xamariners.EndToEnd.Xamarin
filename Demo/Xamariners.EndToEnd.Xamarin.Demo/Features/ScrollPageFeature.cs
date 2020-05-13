@@ -8,10 +8,9 @@ namespace Xamariners.EndToEnd.Xamarin.Demo.Features
 #if __Apple__
     [TestFixture(Platform.iOS)]
 #endif
-
-    public partial class ClickCountPageFeature : FeatureBase
+    public partial class ScrollPageFeature : FeatureBase
     {
-        public ClickCountPageFeature(Platform platform) : base(platform)
+        public ScrollPageFeature(Platform platform) : base(platform)
         {
         }
     }

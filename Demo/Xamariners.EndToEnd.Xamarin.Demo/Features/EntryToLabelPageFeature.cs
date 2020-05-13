@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
 using Xamarin.UITest;
-using Xamariners.EndToEnd.Xamarin.Demo.Features;
-using Xamariners.EndToEnd.Xamarin.Demo.Infrastructure;
+using Xamariners.EndToEnd.Xamarin.Features;
+
 
 namespace Xamariners.EndToEnd.Xamarin.Demo.Features
 {
@@ -9,10 +9,11 @@ namespace Xamariners.EndToEnd.Xamarin.Demo.Features
 #if __Apple__
     [TestFixture(Platform.iOS)]
 #endif
-    public partial class EntryToLabelPageFeature : BaseLocalFeature
+    public partial class EntryToLabelPageFeature : FeatureBase
     {
         public EntryToLabelPageFeature(Platform platform) : base(platform)
         {
+            
         }
     }
 }

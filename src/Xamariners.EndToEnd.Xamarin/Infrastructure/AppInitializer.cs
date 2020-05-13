@@ -1,6 +1,5 @@
 ﻿using Xamarin.UITest;
 using Xamariners.EndToEnd.Xamarin.Features;
-using Xamariners.EndToEnd.Xamarin.Models;
 
 namespace Xamariners.EndToEnd.Xamarin.Infrastructure
 {
@@ -43,6 +42,7 @@ namespace Xamariners.EndToEnd.Xamarin.Infrastructure
         {
             if (platform == Platform.Android)
             {
+                
                 return ConfigureApp.Android.StartApp();
             }
 

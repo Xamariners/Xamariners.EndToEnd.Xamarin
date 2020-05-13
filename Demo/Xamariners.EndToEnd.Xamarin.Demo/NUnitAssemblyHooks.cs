@@ -1,6 +1,4 @@
-﻿using System.Reflection;
-using NUnit.Framework;
-using TechTalk.SpecFlow;
+﻿using NUnit.Framework;
 using Xamariners.EndToEnd.Xamarin.Infrastructure;
 
 namespace Xamariners.EndToEnd.Xamarin.Demo
@@ -10,7 +8,7 @@ namespace Xamariners.EndToEnd.Xamarin.Demo
     {
         static NUnitAssemblyHooks()
         {
-            CurrentAssembly = typeof(NUnitAssemblyHooks).Assembly;
+            RunnerConfiguration.CurrentAssembly = typeof(NUnitAssemblyHooks).Assembly;
         }
     }
 }

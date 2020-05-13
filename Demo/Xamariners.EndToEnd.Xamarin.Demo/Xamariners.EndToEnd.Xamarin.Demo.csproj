@@ -37,12 +37,12 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="NUnit" Version="3.12.0" />
+    <PackageReference Include="NUnit" Version="3.11.0" />
     <PackageReference Include="SpecFlow.NUnit">
-      <Version>3.1.89</Version>
+      <Version>3.1.97</Version>
     </PackageReference>
     <PackageReference Include="SpecFlow.Tools.MsBuild.Generation">
-      <Version>3.1.89</Version>
+      <Version>3.1.97</Version>
     </PackageReference>
     <PackageReference Include="NUnit.Extension.VSProjectLoader" Version="3.8.0" />
     <PackageReference Include="Xamarin.UITest" Version="3.0.7" />
@@ -55,8 +55,8 @@
     <None Include="App.config" />
     <None Include="Features\ClickCountPage.feature" />
     <None Include="Features\EntryToLabelPage.feature" />
-    <None Include="Features\FullNavigation.feature" />
-    <EmbeddedResource Include="testsConfiguration.json" />
+    <EmbeddedResource Include="TestConfig.json" />
+    <None Include="Features\ScrollPage.feature" />
   </ItemGroup>
   <ItemGroup>
     <SpecFlowFeatureFiles Update="Features\ButtonCountPage.feature">
@@ -78,12 +78,9 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Features\FullNavigation.feature.cs</LastGenOutput>
     </SpecFlowFeatureFiles>
-    <Compile Include="Features\FullNavigation.feature.cs" />
-    <Compile Include="Features\FullNavigationFeature.cs" />
-    <Compile Include="Infrastructure\BaseAppInitializer.cs" />
-    <Compile Include="Infrastructure\BaseLocalFeature.cs" />
+    <Compile Include="Features\ScrollPage.feature.cs" />
+    <Compile Include="Features\ScrollPageFeature.cs" />
     <Compile Include="NUnitAssemblyHooks.cs" />
-    <Compile Include="Steps\CommonSteps.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\src\Xamariners.EndToEnd.Xamarin\Xamariners.EndToEnd.Xamarin.csproj">
@@ -91,5 +88,6 @@
       <Name>Xamariners.EndToEnd.Xamarin</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

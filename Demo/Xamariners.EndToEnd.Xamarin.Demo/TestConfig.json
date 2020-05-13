@@ -1,5 +1,6 @@
 {
   "Repl": false,
+  "EnableScreenshots": true,
   "AndroidConfiguration": {
     "ApkName": null,
     "AppPath": "C:\\Work\\Xamarin\\Android\\com.companyname.demoapp.apk"
