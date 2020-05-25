@@ -43,5 +43,13 @@ namespace Xamariners.EndToEnd.Xamarin.SharedSteps
             var stringResult = (string) result;
             stringResult.ShouldBe(text);
         }
+
+        [Given(@"I See the Repl")]
+        [When(@"I See the Repl")]
+        [Then(@"I See the Repl")]
+        public void ThenISeeTheRepl()
+        {
+            RunnerConfiguration.Current.App.Repl();
+        }
     }
 }

@@ -41,5 +41,6 @@ namespace Xamariners.EndToEnd.Xamarin.Screens.Interface
         void DoubleTapOnButtonMarked(string mark);
         void DragAndDropFromElementToElement(string fromMark, string toMark);
         void Flash(string mark);
+        void WhenITapOnMasterDetailHamburger();
     }
 }

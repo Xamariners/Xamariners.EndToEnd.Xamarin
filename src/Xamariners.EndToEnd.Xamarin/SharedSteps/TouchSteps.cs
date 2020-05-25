@@ -83,5 +83,10 @@ namespace Xamariners.EndToEnd.Xamarin.SharedSteps
             if (RunnerConfiguration.Current.EnableScreenshots)
                 ScreenQueries.SaveScreenshot(RunnerConfiguration.Current.ScreenshotsPath, $"Flashed the webview element {mark}");
         }
-    }
+
+        [When(@"I tap on MasterDetail Hamburger")]
+        public void WhenITapOnMasterDetailHamburger()
+        {
+            ScreenQueries.WhenITapOnMasterDetailHamburger();
+        }
 }

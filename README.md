@@ -65,7 +65,8 @@ Some of the shared steps is :
 - I tap on "string" button at index "int"
 - I double tap on "string" button
 - I drag from element "string" and drop at element "string"
-- I flash element "string"
+- I flash element "string
+- I tap on MasterDetail Hamburger
 
 6. WebView Steps
 - I flash webview element "string"
@@ -77,6 +78,7 @@ Some of the shared steps is :
 - I invoke the backdoor method "string" with param "string"
 - I invoke the backdoor method "string" without param
 - the backdoor string result is "string"
+- I see the Repl
 
 For implementations of how this implemented, you can check on `Xamariners.EndToEnd.Xamarin` in `SharedSteps` folder
 

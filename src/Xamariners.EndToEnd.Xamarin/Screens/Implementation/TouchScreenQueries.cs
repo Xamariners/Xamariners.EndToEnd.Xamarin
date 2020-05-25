@@ -1,11 +1,11 @@
 ﻿using System;
+using System.Linq;
 using Shouldly;
 using Xamarin.UITest;
 using Xamarin.UITest.Queries;
 
 namespace Xamariners.EndToEnd.Xamarin.Screens.Implementation
 {
-
     public partial class ScreenQueries
     {
         public AppResult[] WaitForButtonMarked(string mark, string timeoutMessage, int timeout)
@@ -89,6 +89,14 @@ namespace Xamariners.EndToEnd.Xamarin.Screens.Implementation
             WaitForElementMarked(toMark);
             
             App.DragAndDrop(fromMark, toMark);
+        }
+
+        public void WhenITapOnMasterDetailHamburger()
+        {
+            if (App.Query(x => x.Class("ImageButton").Marked("OK")).Any())
+                App.Tap(x => x.Class("ImageButton").Marked("OK"));
+            else if (App.Query(x => x.Class("AppCompatImageButton").Marked("OK")).Any())
+                App.Tap(x => x.Class("AppCompatImageButton").Marked("OK"));
         }
     }
 }
