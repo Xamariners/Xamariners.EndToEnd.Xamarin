@@ -10,17 +10,17 @@ namespace Xamariners.EndToEnd.Xamarin.SharedSteps
         public TouchSteps(ScenarioContext scenarioContext) : base(scenarioContext)
         {
         }
-        
+
         [When(@"I tap on ""([^""]*)"" button")]
         public void WhenITapOn(string mark)
         {
             ScreenQueries.ShouldNotBeNull("ScreenQueries != null");
-           
+
             ScreenQueries.ValidateButtonMarked(mark);
 
             ScreenQueries.TapOnButtonMarked(mark);
 
-            if(RunnerConfiguration.Current.EnableScreenshots)
+            if (RunnerConfiguration.Current.EnableScreenshots)
                 ScreenQueries.SaveScreenshot(RunnerConfiguration.Current.ScreenshotsPath, $"Tapped on button {mark}");
         }
 
@@ -34,7 +34,8 @@ namespace Xamariners.EndToEnd.Xamarin.SharedSteps
             ScreenQueries.TapOnButtonMarked(mark, index);
 
             if (RunnerConfiguration.Current.EnableScreenshots)
-                ScreenQueries.SaveScreenshot(RunnerConfiguration.Current.ScreenshotsPath, $"Tapped on button {mark} at index {index}");
+                ScreenQueries.SaveScreenshot(RunnerConfiguration.Current.ScreenshotsPath,
+                    $"Tapped on button {mark} at index {index}");
         }
 
         [When(@"I tap on ""([^""]*)"" element")]
@@ -58,7 +59,8 @@ namespace Xamariners.EndToEnd.Xamarin.SharedSteps
             ScreenQueries.DoubleTapOnButtonMarked(mark);
 
             if (RunnerConfiguration.Current.EnableScreenshots)
-                ScreenQueries.SaveScreenshot(RunnerConfiguration.Current.ScreenshotsPath, $"Double Tapped on button {mark}");
+                ScreenQueries.SaveScreenshot(RunnerConfiguration.Current.ScreenshotsPath,
+                    $"Double Tapped on button {mark}");
         }
 
         [When(@"I drag from element ""([^""]*)"" and drop at element ""([^""]*)""")]
@@ -69,7 +71,8 @@ namespace Xamariners.EndToEnd.Xamarin.SharedSteps
             ScreenQueries.DragAndDropFromElementToElement(fromMark, toMark);
 
             if (RunnerConfiguration.Current.EnableScreenshots)
-                ScreenQueries.SaveScreenshot(RunnerConfiguration.Current.ScreenshotsPath, $"Dragged from {fromMark} to {toMark} ");
+                ScreenQueries.SaveScreenshot(RunnerConfiguration.Current.ScreenshotsPath,
+                    $"Dragged from {fromMark} to {toMark} ");
         }
 
         [Then(@"I flash element ""([^""]*)""")]
@@ -81,7 +84,8 @@ namespace Xamariners.EndToEnd.Xamarin.SharedSteps
             ScreenQueries.Flash(mark);
 
             if (RunnerConfiguration.Current.EnableScreenshots)
-                ScreenQueries.SaveScreenshot(RunnerConfiguration.Current.ScreenshotsPath, $"Flashed the webview element {mark}");
+                ScreenQueries.SaveScreenshot(RunnerConfiguration.Current.ScreenshotsPath,
+                    $"Flashed the webview element {mark}");
         }
 
         [When(@"I tap on MasterDetail Hamburger")]
@@ -89,4 +93,5 @@ namespace Xamariners.EndToEnd.Xamarin.SharedSteps
         {
             ScreenQueries.WhenITapOnMasterDetailHamburger();
         }
+    }
 }
