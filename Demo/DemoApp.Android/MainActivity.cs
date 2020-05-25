@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Java.Interop;
 
 namespace DemoApp.Droid
 {
@@ -28,6 +29,12 @@ namespace DemoApp.Droid
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
+
+        [Export("BackDoorTest")]
+        public string BackDoorTest(string param)
+        {
+            return $"{param} from backdoor";
         }
     }
 }

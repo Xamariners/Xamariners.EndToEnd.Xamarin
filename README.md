@@ -61,6 +61,7 @@ Some of the shared steps is :
 
 5. Touch Steps
 - I tap on "string" button
+- I tap on "string" element
 - I tap on "string" button at index "int"
 - I double tap on "string" button
 - I drag from element "string" and drop at element "string"
@@ -71,6 +72,11 @@ Some of the shared steps is :
 - I scroll webview to coordinates x "float" and y "float"
 - I scroll down webview to element "string"
 - I scroll up webview to element "string"
+
+7. BackDoor Steps
+- I invoke the backdoor method "string" with param "string"
+- I invoke the backdoor method "string" without param
+- the backdoor string result is "string"
 
 For implementations of how this implemented, you can check on `Xamariners.EndToEnd.Xamarin` in `SharedSteps` folder
 

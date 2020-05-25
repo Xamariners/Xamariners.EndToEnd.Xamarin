@@ -21,3 +21,8 @@ And I can see label "ClickCountLabel" text "Clicked 2 times"
 When I tap on "CountButton" button
 Then I can see "Clicked 3 times"
 And I can see label "ClickCountLabel" text "Clicked 3 times"
+
+Scenario: Test BackDoor 
+Given I am on "Main page" page
+When I invoke the backdoor method "BackDoorTest" with param "Hello"
+Then the backdoor string result is "Hello from backdoor"

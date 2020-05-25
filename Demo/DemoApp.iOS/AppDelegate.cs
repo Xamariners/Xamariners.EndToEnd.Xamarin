@@ -29,5 +29,11 @@ namespace DemoApp.iOS
 
             return base.FinishedLaunching(app, options);
         }
+
+        [Export("BackDoorTest:")]
+        public NSString BackDoorTest(NSString param)
+        {
+            return new NSString($"{param} from backdoor");
+        }
     }
 }

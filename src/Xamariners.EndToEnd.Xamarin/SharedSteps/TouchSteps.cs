@@ -7,7 +7,6 @@ namespace Xamariners.EndToEnd.Xamarin.SharedSteps
     [Binding]
     public class TouchSteps : StepBase
     {
-
         public TouchSteps(ScenarioContext scenarioContext) : base(scenarioContext)
         {
         }
@@ -36,6 +35,17 @@ namespace Xamariners.EndToEnd.Xamarin.SharedSteps
 
             if (RunnerConfiguration.Current.EnableScreenshots)
                 ScreenQueries.SaveScreenshot(RunnerConfiguration.Current.ScreenshotsPath, $"Tapped on button {mark} at index {index}");
+        }
+
+        [When(@"I tap on ""([^""]*)"" element")]
+        public void WhenITapOnElement(string mark)
+        {
+            ScreenQueries.ShouldNotBeNull("ScreenQueries != null");
+
+            ScreenQueries.TapOnElementMarked(mark);
+
+            if (RunnerConfiguration.Current.EnableScreenshots)
+                ScreenQueries.SaveScreenshot(RunnerConfiguration.Current.ScreenshotsPath, $"Tapped on element {mark}");
         }
 
         [When(@"I double tap on ""([^""]*)"" button")]
